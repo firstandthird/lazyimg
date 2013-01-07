@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>lazyimg Tests</title>
+  <link rel="stylesheet" href="../node_modules/mocha/mocha.css" />
+  <script src="../support/assert.js"></script>
+  <script src="../node_modules/mocha/mocha.js"></script>
+  <script>mocha.setup('tdd')</script>
+</head>
+<body>
+  <div id="mocha"></div>
+  <div id="fixture" style="display: none">
+    <img data-image="kitten.jpeg"/>
+    <div data-image="kitten.jpeg"></div>
+  </div>
+  <script src="../components/jquery/jquery.js"></script>
+  <script src="../dist/lazyimg.js"></script>
+  <script src="lazyimg.test.js"></script>
+  <script>
+    mocha.run()
+  </script>
+</body>
+</html>
