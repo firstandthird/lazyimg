@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "devDependencies": {
-    "grunt-set-jslib": "^0.2.0"
+    "grunt-set-jslib": "^0.2.0",
+    "grunt": "^0.4.5",
+    "grunt-set": "0.0.4"
   }
 }

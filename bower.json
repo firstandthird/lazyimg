@@ -2,9 +2,8 @@
   "name": "lazyimg",
   "version": "0.2.0",
   "homepage": "https://github.com/firstandthird/lazyimg",
-  "authors": [
-    "First+Third"
-  ],
+  "copyright": "First+Third",
+  "license": "MIT",
   "description": "Library to handle lazy loading images",
   "main": "dist/lazyimg.js",
   "keywords": [
