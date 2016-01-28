@@ -122,7 +122,7 @@
     <script src="../bower_components/jquery/jquery.js"></script>
     <script src="../dist/lazyimg.js"></script>
     <script>
-      $(window).on('lazyimg.imageload', function(e, el, img, type) {
+      $(window).on('imageload.lazyimg', function(e, el, img, type) {
         console.log(type);
       });
     </script>
