@@ -5,7 +5,6 @@
  * copyright First+Third 2016
  * MIT License
 */
-
 (function($) {
   var $window = $(window);
 
