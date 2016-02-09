@@ -122,6 +122,11 @@
     <script src="../bower_components/jquery/jquery.js"></script>
     <script src="../dist/lazyimg.js"></script>
     <script>
+
+      var onloadCount = $('[data-image]').length;
+      var onScrollCount = $('[data-image-scroll]').length;
+      console.log('Load Count', onloadCount);
+      console.log('Scroll Count', onScrollCount);
       $(window).on('imageload.lazyimg', function(e, el, img, type) {
         console.log(type);
       });

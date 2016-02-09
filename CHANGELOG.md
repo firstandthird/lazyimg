@@ -1,4 +1,9 @@
 
+0.4.0 / 2016-02-09
+==================
+
+  * refactored to expose functionality via $.lazyImg and $.fn.lazyImg
+
 0.3.0 / 2016-01-28
 ==================
 
