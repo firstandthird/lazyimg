@@ -1,6 +1,6 @@
 /*!
  * lazyimg - Library to handle lazy loading images
- * v0.4.0
+ * v0.5.1
  * https://github.com/firstandthird/lazyimg
  * copyright First+Third 2016
  * MIT License
@@ -8,7 +8,7 @@
 
 (function($) {
   var $window = $(window);
-  var boundScroll = false;
+  var bindScroll = false;
 
   $.lazyImg = {};
 
@@ -19,6 +19,10 @@
 
       if (imgSrc) {
         if (el[0].tagName == 'IMG') {
+          el.on('error', function() {
+            $window.trigger('imageerror.lazyimg', [el, imgSrc, type]);
+          });
+
           el.attr('src', imgSrc);
         } else {
           el.css('background-image', 'url(' + imgSrc + ')');
@@ -51,7 +55,7 @@
   };
 
   $.lazyImg.bindScroll = function() {
-    if (boundScroll) {
+    if (bindScroll) {
       return;
     }
     $window.on('scroll.lazyimg', $.lazyImg.scroll);
