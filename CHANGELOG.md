@@ -1,4 +1,10 @@
 
+0.5.0 / 2016-04-27
+==================
+
+  * fix bug with checking if already bound to scroll
+  * Trigger error when image fails
+
 0.4.0 / 2016-02-09
 ==================
 
