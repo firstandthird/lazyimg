@@ -3,6 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <title>lazyimg example</title>
+    <style>
+      .lazy-box {
+        background: green;
+      }
+    </style>
   </head>
   <body>
     <div><img data-image="/test/kitten.jpeg" height="50"></div>
@@ -117,6 +122,8 @@
     <div style="height: 50px; width: 50px; background-size: contain; background-repeat: no-repeat" data-image="/test/kitten.jpeg"></div>
     <div><img data-image-scroll="/test/kitten.jpeg" height="50"></div>
     <div style="height: 50px; width: 50px; background-size: contain; background-repeat: no-repeat" data-image-scroll="/test/kitten.jpeg"></div>
+    <div data-image-class="lazy-box" style="height: 50px; width: 50px;"></div>
+    <div data-image-scroll-class="lazy-box" style="height: 50px; width: 50px;"></div>
 
 
     <script src="../bower_components/jquery/jquery.js"></script>
