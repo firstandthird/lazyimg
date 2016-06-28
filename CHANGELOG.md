@@ -1,4 +1,9 @@
 
+0.6.0 / 2016-06-28
+==================
+
+  * added support for data-image-class and data-image-scroll-class to add that class when scrolling into view
+
 0.5.1 / 2016-04-27
 ==================
 

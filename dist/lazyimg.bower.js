@@ -1,6 +1,6 @@
 /*!
  * lazyimg - Library to handle lazy loading images
- * v0.5.1
+ * v0.6.0
  * https://github.com/firstandthird/lazyimg
  * copyright First+Third 2016
  * MIT License
@@ -26,10 +26,18 @@
         } else {
           el.css('background-image', 'url(' + imgSrc + ')');
         }
+      } else {
+        var className = el.data('image-class') || el.data('image-scroll-class');
+        if (!className) {
+          return;
+        }
+        el.addClass(className);
       }
 
       if (type == 'scroll') {
-        el.removeAttr('data-image-scroll');
+        el
+          .removeAttr('data-image-scroll')
+          .removeAttr('data-image-scroll-class');
       }
       $window.trigger('imageload.lazyimg', [el, imgSrc, type]);
 
@@ -39,7 +47,7 @@
   $.lazyImg.scroll = function() {
     var windowOffset = $window.height() + $window.scrollTop();
 
-    var scrollImages = $('[data-image-scroll]');
+    var scrollImages = $('[data-image-scroll],[data-image-scroll-class]');
     if (scrollImages.length === 0) {
       $window.off('scroll.lazyimg');
       bindScroll = false;
@@ -63,7 +71,7 @@
   $.lazyImg.bindScroll();
 
   $window.load(function() {
-    $('[data-image]').lazyImg('load');
+    $('[data-image],[data-image-class]').lazyImg('load');
     $window.trigger('scroll.lazyimg');
   });
 
